@@ -1,0 +1,102 @@
+html, body {
+	width: 100%;
+	height: 100%;
+	padding: 2.4%;
+	padding-top: 0;
+}
+.header-text {
+	text-align: center;
+	font-size: 18px;
+	padding: 10px 0;
+}
+.green-box {
+	width: 100%;
+	height: 100%;
+	background: #22B573;
+	border: 3px solid #006837;
+	position: relative;
+}
+.free {
+	height: 660px;
+	top: 5px;
+	right: 50px;
+}
+.p-absolute {
+	position: absolute;
+}
+nav {
+	top: 30px;
+	left: 35px;
+}
+li {
+	display: inline-block;
+	font-size: 48px;
+	margin-right: 10px;	
+}
+li a {
+	color: #fff;
+}
+.create {
+	right: 10px;
+	bottom: 10px;
+	color: #FCEE21;
+	font-size: 14px;
+}
+.white-box {
+	width: 660px;
+	height: 490px;
+	background: #fff;
+	left: -3px;
+	bottom: -3px;
+	transition: all 0.1s ease 0.1s;
+	z-index: 10;
+}
+
+.dark-green-box{
+	width: 300px;
+	height: 300px;
+	background-color: #006837;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	transition: all 0.7s ease 0.7s;
+	animation: mymove 3s linear 1s infinite alternate;
+}
+.text{
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%) rotate(-314deg);
+	font-size: 39px;
+	color: #FFFF00;
+	white-space: nowrap;
+	transition: all 0.3s ease 0.3s;
+}
+.read-more{
+	right: 10px;
+	bottom: 0;
+	color: #006837;
+	font-size: 16px;
+	transition: all 0.3s linear 0.3s;
+}
+.white-box:hover{
+	background: red;	
+}
+.white-box:hover .text {
+	transform: translate(-50%,-50%) rotate(0deg) scale(1.5);
+	font-size: 50px;
+}
+.white-box:hover .dark-green-box{
+	background-color: aqua;
+	transform: translate(-50%,-50%)  skew(20deg) rotate(45deg);
+}
+.white-box:hover .read-more{
+	right: 50px;
+	color: white;
+	font-size: 20px;
+	transform: scale(1.5) ;	
+} 
+@keyframes mymove {
+	0% {top:20%;background: yellow}
+	50% {top:50%;background: green}
+	100% {top:100%;background: red}
+}
